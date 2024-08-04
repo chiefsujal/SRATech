@@ -1,0 +1,99 @@
+/* Container for Navbar */
+.container {
+    max-width: 140rem;
+    padding: 2.4rem; /* Adjusted padding */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto; /* Center container */
+}
+
+/* Logo Brand Styling */
+.logo-brand {
+    position: relative;
+}
+
+.logo-brand a {
+    text-decoration: none;
+    font-size: 2.4rem;
+    color: cadetblue;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: relative;
+    top: 0; /* Adjusted to align better */
+    left: 0; /* Adjusted to align better */
+    transition: color 0.3s ease-in-out;
+}
+
+.logo-brand a:hover {
+    color: darkcyan; /* Hover color change */
+}
+
+/* Navbar Menu */
+ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    gap: 2rem; /* Adjusted gap for better spacing */
+    margin: 0;
+}
+
+ul li {
+    position: relative;
+    transition: transform 0.3s ease-in-out; /* Added smooth transitions */
+}
+
+ul li:hover {
+    transform: scale(1.05); /* Slight scaling effect */
+}
+
+/* Menu Links */
+ul a {
+    text-decoration: none;
+    font-size: 1.6rem; /* Slightly larger for better readability */
+    color: rgb(112, 146, 205);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0.5rem 1rem;
+    position: relative; /* Needed for the underline */
+    transition: color 0.3s ease-in-out; /* Added smooth transitions */
+}
+
+ul a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -0.2rem; /* Adjust position if necessary */
+    width: 0;
+    height: 2px;
+    background: rgb(112, 146, 205);
+    transition: width 0.3s ease-in-out; /* Smooth underline animation */
+}
+
+ul a:hover::after {
+    width: 100%; /* Full-width underline on hover */
+}
+
+ul a:hover {
+    color: rgb(79, 104, 157); /* Hover color change */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    ul a {
+        padding: 1rem 0;
+        width: 100%;
+        text-align: left;
+    }
+}
