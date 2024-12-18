@@ -1,0 +1,20 @@
+/* Footer Styling */
+footer {
+  padding: 3.2rem;
+  text-align: center;
+  background-color: var(--btn-color);
+  margin-top: auto; /* Ensure footer is pushed to the bottom */
+  color: white; /* Adjust text color for better visibility */
+}
+
+/* Ensure full height for body and layout */
+body, #root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+main {
+  flex: 1; /* Makes main content stretch to fill the remaining space */
+}
